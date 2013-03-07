@@ -4,11 +4,12 @@ Wrote a LinkedIn OAuth v2.0 client over a patched [requests-oauth2](https://gith
 
 linkedin-requests-oauth2 wants to provide the simplest and easiest way to write a LinkedIn OAuth2 in Python. 
 
-Author: 
-<a href="http://github.com/dasickis">Praful Mathur</a>
-<a href="http://github.com/SRaja001">Sreenesh Raja</a>
+Authors:  
+[Praful Mathur](http://github.com/dasickis)  
+[Sreenesh Raja](http://github.com/SRaja001)  
 
-License: BSD
+License:  
+BSD
 
 ## Usage Example
 
