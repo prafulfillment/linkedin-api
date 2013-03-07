@@ -10,9 +10,13 @@ Author:
 
 License: BSD
 
-## Next
+## Usage Example
 
-Python code not very pretty :(
+```python
+linkedin_handler = LinkedIn_OAuth2(LI_API_KEY, LI_SECRET_KEY, REDIRECT_URI)
+redirect(linkedin_handler.authorize_url())  # redirects to your site with code & state params
+linkedin_handler.get_token(code)  # code param from previous step
+```
 
 ## Interesting readings
 
