@@ -14,7 +14,7 @@ BSD
 ## Usage Example
 
 ```python
-from linkedin_requests_oauth2.linkedin_auth import LinkedIn_OAuth2 as li_oauth2
+from linkedin_requests_oauth2 import LinkedIn_OAuth2 as li_oauth2
 
 linkedin_handler = li_oauth2(LI_API_KEY, LI_SECRET_KEY, REDIRECT_URI)
 redirect(linkedin_handler.authorize_url())  # redirects to your site with code & state params

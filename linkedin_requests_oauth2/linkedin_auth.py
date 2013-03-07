@@ -13,7 +13,7 @@ class LinkedIn_OAuth2(OAuth2):
 
     def __init__(self, client_id, client_secret, redirect_uri):
         self.state = self.unique_string()
-        OAuth2.__init__(self.client_id, client_secret, LINKEDIN_URL, redirect_uri, AUTHORIZATION_URL, TOKEN_URL)
+        OAuth2.__init__(self, client_id, client_secret, LINKEDIN_URL, redirect_uri, AUTHORIZATION_URL, TOKEN_URL)
 
     def unique_string(size=20, valid_chars=None):
         if valid_chars is None:
