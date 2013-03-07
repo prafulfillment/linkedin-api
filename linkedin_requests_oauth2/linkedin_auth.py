@@ -1,6 +1,6 @@
 import string
 import random
-from requests_oauth2 import OAuth2
+from .oauth2 import OAuth2
 
 LINKEDIN_URL = 'https://www.linkedin.com/uas/oauth2'
 AUTHORIZATION_URL = '/authorization'
