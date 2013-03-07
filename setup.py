@@ -3,16 +3,16 @@
 
 from setuptools import setup, find_packages
 
-version = '0.2.0'
+version = '0.0.0'
 
 setup(
-    name='requests-oauth2',
+    name='linkedin-requests-oauth2',
     version=version,
-    description='Open Authentication 2 support to Python-requests HTTP library.',
+    description='LinkedIn Open Authentication 2 support to Python-requests HTTP library.',
     long_description=open('README.md').read(),
     author='Miguel Araujo',
     author_email='miguel.araujo.perez@gmail.com',
-    url='http://github.com/maraujop/requests-oauth2',
+    url='http://github.com/derivatived/linkedin-requests-oauth2',
     packages=find_packages(),
     install_requires=['requests', ],
     license='BSD',
@@ -25,6 +25,6 @@ setup(
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ),
-    keywords=['requests', 'python-requests', 'OAuth', 'open authentication'],
+    keywords=['requests', 'python-requests', 'OAuth', 'open authentication', 'LinkedIn'],
     zip_safe=False,
 )
