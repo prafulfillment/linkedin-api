@@ -14,9 +14,9 @@ BSD
 ## Usage Example
 
 ```python
-from linkedin_requests_oauth2 import LinkedIn_OAuth2 as li_oauth2
+from linkedin_auth import LinkedInAuth
 
-linkedin_handler = li_oauth2(LI_API_KEY, LI_SECRET_KEY, REDIRECT_URI)
+linkedin_handler = LinkedInAuth(LI_API_KEY, LI_SECRET_KEY, REDIRECT_URI)
 redirect(linkedin_handler.authorize_url())  # redirects to your site with code & state params
 linkedin_handler.get_token(code)  # code param from previous step
 ```
@@ -25,3 +25,7 @@ linkedin_handler.get_token(code)  # code param from previous step
 
 * LinkedIn API Docs:
 https://developers.linkedin.com/documents/authentication
+
+## TODO
+
+* Make simple Flask example
