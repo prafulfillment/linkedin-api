@@ -11,7 +11,10 @@ class OAuth2(object):
     authorization_url = '/oauth/authorize'
     token_url = '/oauth/token'
 
-    def __init__(self, client_id, client_secret, site, redirect_uri, authorization_url=None, token_url=None):
+    def __init__(self,
+                client_id, client_secret,
+                redirect_uri, site,
+                authorization_url=None, token_url=None):
         """
         Initializes the hook with OAuth2 parameters
         """
@@ -28,15 +31,23 @@ class OAuth2(object):
         """
         Returns the url to redirect the user to for user consent
         """
-        oauth_params = {'redirect_uri': self.redirect_uri, 'client_id': self.client_id, 'scope': scope}
+        oauth_params = {'redirect_uri': self.redirect_uri,
+                        'client_id': self.client_id,
+                        'scope': scope}
         oauth_params.update(kwargs)
-        return "%s%s?%s" % (self.site, quote(self.authorization_url), urlencode(oauth_params))
+
+        return "%s%s?%s" % (self.site,
+                            quote(self.authorization_url),
+                            urlencode(oauth_params))
 
     def get_token(self, code, **kwargs):
         """
         Requests an access token
         """
-        data = {'redirect_uri': self.redirect_uri, 'client_id': self.client_id, 'client_secret': self.client_secret, 'code': code}
+        data = {'redirect_uri': self.redirect_uri,
+                'client_id': self.client_id,
+                'client_secret': self.client_secret,
+                'code': code}
         data.update(kwargs)
 
         url = "%s%s?%s" % (self.site, quote(self.token_url), urlencode(data))
