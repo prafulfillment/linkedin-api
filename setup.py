@@ -6,13 +6,13 @@ from setuptools import setup, find_packages
 version = '0.0.0'
 
 setup(
-    name='linkedin-requests-oauth2',
+    name='linkedin-api',
     version=version,
-    description='LinkedIn Open Authentication 2 support to Python-requests HTTP library.',
+    description='LinkedIn API.',
     long_description=open('README.md').read(),
-    author='Miguel Araujo',
-    author_email='miguel.araujo.perez@gmail.com',
-    url='http://github.com/derivatived/linkedin-requests-oauth2',
+    author='Praful Mathur',
+    author_email='praful.mathur@gmail.com',
+    url='http://github.com/derivatived/linkedin-api',
     packages=find_packages(),
     install_requires=['requests', ],
     license='BSD',
@@ -25,6 +25,6 @@ setup(
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ),
-    keywords=['requests', 'python-requests', 'OAuth', 'open authentication', 'LinkedIn'],
+    keywords=['requests', 'python-requests', 'OAuth', 'open authentication', 'LinkedIn', 'api', 'auth', 'social networking'],
     zip_safe=False,
 )
