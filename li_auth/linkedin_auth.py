@@ -7,7 +7,7 @@ AUTHORIZATION_URL = '/authorization'
 TOKEN_URL = '/accessToken'
 
 
-class LinkedIn_OAuth2(OAuth2):
+class LinkedInAuth(OAuth2):
     response_type = 'code'
     grant_type = 'authorization_code'
 
