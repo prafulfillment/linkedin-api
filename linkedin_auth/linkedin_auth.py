@@ -6,6 +6,7 @@ LINKEDIN_URL = 'https://www.linkedin.com/uas/oauth2'
 AUTHORIZATION_URL = '/authorization'
 TOKEN_URL = '/accessToken'
 
+__all__ = ['LinkedInAuth']
 
 class LinkedInAuth(OAuth2):
     response_type = 'code'
