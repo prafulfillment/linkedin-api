@@ -11,10 +11,8 @@ class OAuth2(object):
     authorization_url = '/oauth/authorize'
     token_url = '/oauth/token'
 
-    def __init__(self,
-                client_id, client_secret,
-                redirect_uri, site,
-                authorization_url=None, token_url=None):
+    def __init__(self, client_id, client_secret, redirect_uri, site,
+                 authorization_url=None, token_url=None):
         """
         Initializes the hook with OAuth2 parameters
         """
@@ -36,9 +34,9 @@ class OAuth2(object):
                         'scope': scope}
         oauth_params.update(kwargs)
 
-        return "%s%s?%s" % (self.site,
-                            quote(self.authorization_url),
-                            urlencode(oauth_params))
+        return "{0}{1}?{2}".format(self.site,
+                                   quote(self.authorization_url),
+                                   urlencode(oauth_params))
 
     def get_token(self, code, **kwargs):
         """
@@ -50,7 +48,7 @@ class OAuth2(object):
                 'code': code}
         data.update(kwargs)
 
-        url = "%s%s?%s" % (self.site, quote(self.token_url), urlencode(data))
+        url = "{0}{1}?{2}".format(self.site, quote(self.token_url), urlencode(data))
 
         response = requests.post(url)
 

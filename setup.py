@@ -3,18 +3,18 @@
 
 from setuptools import setup, find_packages
 
-version = '0.0.0'
+version = '0.0.1'
 
 setup(
     name='linkedin-api',
     version=version,
     description='LinkedIn API.',
     long_description=open('README.md').read(),
-    author='Praful Mathur',
-    author_email='praful.mathur@gmail.com',
+    author='Praful Mathur, Alec Taylor',
+    author_email='praful.mathur@gmail.com, alec.taylor6@gmail.com',
     url='http://github.com/derivatived/linkedin-api',
     packages=find_packages(),
-    install_requires=['requests', ],
+    install_requires=['requests'],
     license='BSD',
     classifiers=(
         "Development Status :: 5 - Production/Stable",
@@ -25,6 +25,7 @@ setup(
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ),
-    keywords=['requests', 'python-requests', 'OAuth', 'open authentication', 'LinkedIn', 'api', 'auth', 'social networking'],
+    keywords=['requests', 'python-requests', 'OAuth', 'OAuth2', 'open authentication',
+              'LinkedIn', 'api', 'auth', 'social networking'],
     zip_safe=False,
 )
