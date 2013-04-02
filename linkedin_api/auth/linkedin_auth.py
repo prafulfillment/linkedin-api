@@ -12,16 +12,13 @@ class LinkedInAuth(OAuth2):
     response_type = 'code'
     grant_type = 'authorization_code'
 
-    def __init__(self,
-                client_id, client_secret,
-                redirect_uri, site=LINKEDIN_URL,
-                authorization_url=AUTHORIZATION_URL, token_url=TOKEN_URL):
+    def __init__(self, client_id, client_secret, redirect_uri, site=LINKEDIN_URL,
+                 authorization_url=AUTHORIZATION_URL, token_url=TOKEN_URL):
         self._state = self.unique_string()
 
-        OAuth2.__init__(self,
-                client_id=client_id, client_secret=client_secret,
-                site=LINKEDIN_URL, redirect_uri=redirect_uri,
-                authorization_url=authorization_url, token_url=token_url)
+        OAuth2.__init__(self, client_id=client_id, client_secret=client_secret,
+                        site=LINKEDIN_URL, redirect_uri=redirect_uri,
+                        authorization_url=authorization_url, token_url=token_url)
 
     @property
     def state(self):
@@ -31,17 +28,13 @@ class LinkedInAuth(OAuth2):
         if valid_chars is None:
             valid_chars = string.letters + string.digits
 
-        return ''.join(random.choice(valid_chars) for x in range(size))
+        return ''.join(random.choice(valid_chars) for x in xrange(size))
 
     def authorize_url(self, scope='', **kwargs):
         state = self.state
         response_type = self.response_type
 
-        return OAuth2.authorize_url(self,
-                scope=scope, state=state, response_type=response_type,
-                **kwargs)
+        return OAuth2.authorize_url(self, scope=scope, state=state, response_type=response_type, **kwargs)
 
     def get_token(self, code, **kwargs):
-        return OAuth2.get_token(self,
-                code=code, grant_type=self.grant_type,
-                **kwargs)
+        return OAuth2.get_token(self, code=code, grant_type=self.grant_type, **kwargs)
