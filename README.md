@@ -7,6 +7,7 @@ linkedin-requests-oauth2 wants to provide the simplest and easiest way to write 
 Authors:  
 [Praful Mathur](http://github.com/dasickis)  
 [Sreenesh Raja](http://github.com/SRaja001)  
+[Alec Taylor](https://github.com/supe3)
 
 License:  
 BSD
