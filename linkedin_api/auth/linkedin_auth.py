@@ -8,6 +8,13 @@ TOKEN_URL = '/accessToken'
 
 __all__ = ['LinkedInAuth']
 
+
+class Token(object):
+    def __init__(self, access_token, expires):
+        self.access_token = access_token
+        self.expires = expires
+
+
 class LinkedInAuth(OAuth2):
     response_type = 'code'
     grant_type = 'authorization_code'
@@ -42,6 +49,7 @@ class LinkedInAuth(OAuth2):
                 **kwargs)
 
     def get_token(self, code, **kwargs):
-        return OAuth2.get_token(self,
+        token = OAuth2.get_token(self,
                 code=code, grant_type=self.grant_type,
                 **kwargs)
+        return Token(token['access_token'], token['expires'])
